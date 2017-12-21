@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Star Wars Game</title>
+</head>
+<body>
+	<div>Star Wars game!</div>
+	<hr>
+	<div id="heros"></div>
+
+
+
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+	var heroSelection = [
+	"Yoda",
+	"Obi-Wan Kenobi",
+	"Qui-Gon Jinn",
+	"Young Anakin"
+	];
+
+	var hitPoints = [
+	200,
+	160,
+	90,
+	50
+	];
+
+	var villains = [
+	"Darth Maul",
+	"Darth Sidious",
+	"Droid Squadron",
+	"Neimoidian Overlords"
+	];
+	// console.log(heroSelection);
+	for(var i = 0; i < heroSelection.length; i++){
+		var hero = $("<div>");
+		hero.addClass("hero");
+		hero.attr("data-points", hitPoints[i]);
+		hero.text(heroSelection[i]);
+		$("#heros").append(hero);
+		console.log(heroSelection[i]);
+	}
+	
+
+	$(".hero").on("click", function(){
+		if($(".hero").data("data-points") === 200){
+
+		}
+		if($(".hero").data("data-points") === 160){
+
+		}
+		if($(".hero").data("data-points") === 90){
+
+		}
+		if($(".hero").data("data-points") === 50){
+
+		}
+	})
+	
+	});
+
+
+	</script>
+</body>
+</html>
